@@ -17,9 +17,19 @@ This module adds a convenient `SiteConfig` like interface for managing global co
  Useful for when you want global content but don't want to give content-authors access to `SiteConfig`
  
 #Module Usage#
+Add in `GlobalContentExtension` to the setup.yml
+
+```
+GlobalContent:
+  extensions:
+    - GlobalContentExtension
+```
+
 Too add additional fields:
-* Create a `DataExtension` that gets applied to `GlobalContent`
+* Create a `DataExtension` that gets applied to `GlobalContent` 
 * The extension requires an `updateFields(FieldList $fields)` method and any standard `DataExtension` properties 
+
+Using this code create `GlobalContentExtension.php` inside mysite/code/Extensions and add in the desired fields.
 
 ```php5
 <?php
